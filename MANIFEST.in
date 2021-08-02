@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include viva *.css
+recursive-include viva *.csv
+recursive-include viva *.html
+recursive-include viva *.ico
+recursive-include viva *.js
+recursive-include viva *.json
+recursive-include viva *.md
+recursive-include viva *.png
+recursive-include viva *.py
+recursive-include viva *.svg
+recursive-include viva *.txt
+recursive-exclude viva *.pyc
