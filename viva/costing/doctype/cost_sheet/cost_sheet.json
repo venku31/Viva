@@ -1,0 +1,852 @@
+{
+ "actions": [],
+ "autoname": "BC-.####",
+ "creation": "2021-08-03 11:19:03.138729",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bag_type",
+  "column_break_2",
+  "date",
+  "ccwt",
+  "bag_weight",
+  "bag_size_section",
+  "type",
+  "extra_fold_bag_type",
+  "extra_fold",
+  "cross_corner",
+  "butterfly_fold",
+  "net_total",
+  "column_break_4",
+  "layers_id",
+  "layers_od",
+  "column_break_7",
+  "l_id",
+  "l_od",
+  "efbt_l",
+  "efbt_od",
+  "ef_l",
+  "ef_od",
+  "cc_l",
+  "cc_od",
+  "bf_l",
+  "bf_od",
+  "total_l",
+  "total_od",
+  "column_break_8",
+  "w_sp_id",
+  "w_sp_od",
+  "efbt_w_sp",
+  "efbt_w_sp_od",
+  "ef_w_sp",
+  "ef_w_sp_od",
+  "cc__w_sp",
+  "cc__w_sp_od",
+  "bf_w_sp",
+  "bf_w_sp_od",
+  "total_w_sp",
+  "total_w_sp_od",
+  "column_break_13",
+  "h_id",
+  "h_od",
+  "efbt_h",
+  "efbt_h_od",
+  "ef_h",
+  "ef_h_od",
+  "cc_h",
+  "cc_h_od",
+  "bf_h",
+  "bf_h_od",
+  "total_h",
+  "total_h_od",
+  "section_break_38",
+  "liner_type",
+  "column_break_40",
+  "nos",
+  "column_break_42",
+  "micron",
+  "column_break_44",
+  "gluing",
+  "column_break_46",
+  "tabbing",
+  "body_fabric_section",
+  "fabric",
+  "fabric_sp",
+  "base_gsm_4_panel",
+  "body_attachment",
+  "extra_base",
+  "column_break_54",
+  "type_fabric",
+  "type_fabric_sp",
+  "type_base_gsm",
+  "type_body_attachment",
+  "type_extra_base",
+  "column_break_60",
+  "gsm_fabric",
+  "gsm_fabric_sp",
+  "gsm_base",
+  "gsm_body_attachment",
+  "gsm_extra_base",
+  "column_break_66",
+  "rf_fabric",
+  "rf_fabric_sp",
+  "rf_base_gsm",
+  "rf_body_attachment",
+  "rf_extra_base",
+  "column_break_72",
+  "coated_fabric",
+  "coated_fabric_sp",
+  "coated_base_gsm",
+  "coated_body_attachment",
+  "coated_extra_base",
+  "column_break_78",
+  "total_fabric",
+  "total_fabric_sp",
+  "total_base_gsm",
+  "total_body_attachment",
+  "total_extra_base",
+  "section_break_84",
+  "dust_proof",
+  "column_break_86",
+  "body",
+  "column_break_88",
+  "baffle",
+  "column_break_90",
+  "att",
+  "column_break_92",
+  "df_nos",
+  "column_break_94",
+  "gsm",
+  "top_attachement_type",
+  "ta_type",
+  "hemming",
+  "top_panel_if_spout",
+  "column_break_115",
+  "fab_type_spout",
+  "fab_type_hemming",
+  "fab_type_top_panel",
+  "column_break_119",
+  "gsm_spout",
+  "gsm_hemming",
+  "gsm_top_panel",
+  "column_break_123",
+  "coated_spout",
+  "coated_hemming",
+  "coated_top_panel",
+  "column_break_127",
+  "total_spout",
+  "total_hemming",
+  "total_top_panel"
+ ],
+ "fields": [
+  {
+   "fieldname": "bag_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Bag Type",
+   "options": "\nCircular\nU+2\n4Panel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bag_size_section",
+   "fieldtype": "Section Break",
+   "label": "Bag Size"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "ID\nOD"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "layers_id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Layers "
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "l_id",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "L(Cms)"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "w_sp_id",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "W/SP(Cms)"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "h_id",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "H(Cms)"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "layers_od",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Layers "
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "l_od",
+   "fieldtype": "Float",
+   "label": "L(Cms)"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "w_sp_od",
+   "fieldtype": "Float",
+   "label": "W/SP(Cms)"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "h_od",
+   "fieldtype": "Float",
+   "label": "H(Cms)"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "extra_fold_bag_type",
+   "fieldtype": "Select",
+   "label": "Extra Fold Bag Type",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "extra_fold",
+   "fieldtype": "Select",
+   "label": "Extra Fold",
+   "options": "NO\nYES"
+  },
+  {
+   "fieldname": "cross_corner",
+   "fieldtype": "Select",
+   "label": "Cross Corner",
+   "options": "NO\nYES"
+  },
+  {
+   "fieldname": "butterfly_fold",
+   "fieldtype": "Select",
+   "label": "Butterfly Fold",
+   "options": "NO\nYES"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "efbt_l",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "ef_l",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "cc_l",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "bf_l",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "efbt_w_sp",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "ef_w_sp",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "cc__w_sp",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "bf_w_sp",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "efbt_h",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "ef_h",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "bf_h",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Heading",
+   "label": "Net Total"
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "total_h",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "total_w_sp",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "total_l",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "fieldname": "liner_type",
+   "fieldtype": "Select",
+   "label": "Liner Type",
+   "options": "Normal\nNA"
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nos",
+   "fieldtype": "Int",
+   "label": "Nos"
+  },
+  {
+   "default": "0",
+   "fieldname": "micron",
+   "fieldtype": "Check",
+   "label": "Micron"
+  },
+  {
+   "default": "0",
+   "fieldname": "gluing",
+   "fieldtype": "Check",
+   "label": "Gluing"
+  },
+  {
+   "default": "0",
+   "fieldname": "tabbing",
+   "fieldtype": "Check",
+   "label": "Tabbing"
+  },
+  {
+   "fieldname": "column_break_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "body_fabric_section",
+   "fieldtype": "Section Break",
+   "label": "Body Fabric"
+  },
+  {
+   "default": "Fabric",
+   "fieldname": "fabric",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "default": "Fabric SP",
+   "fieldname": "fabric_sp",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "default": "Body Attachment",
+   "fieldname": "body_attachment",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "default": "Extra Base",
+   "fieldname": "extra_base",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "default": "Base GSM 4 Panel",
+   "fieldname": "base_gsm_4_panel",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_fabric",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "PP-Flat\nPP-Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "type_fabric_sp",
+   "fieldtype": "Select",
+   "options": "PP-Flat\nPP-Circular\nSulzer\nVentilated"
+  },
+  {
+   "fieldname": "type_base_gsm",
+   "fieldtype": "Select",
+   "options": "PP-Flat\nPP-Circular\nSulzer\nVentilated"
+  },
+  {
+   "fieldname": "type_body_attachment",
+   "fieldtype": "Select",
+   "options": "NA\nBaffle\nNet Baffle"
+  },
+  {
+   "fieldname": "type_extra_base",
+   "fieldtype": "Select",
+   "options": "Nos"
+  },
+  {
+   "fieldname": "column_break_60",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 3,
+   "default": "140",
+   "fieldname": "gsm_fabric",
+   "fieldtype": "Data",
+   "label": "GSM",
+   "width": "2"
+  },
+  {
+   "default": "140",
+   "fieldname": "gsm_fabric_sp",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "140",
+   "fieldname": "gsm_base",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "gsm_body_attachment",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "gsm_extra_base",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_66",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rf_fabric",
+   "fieldtype": "Data",
+   "label": "RF"
+  },
+  {
+   "default": "0",
+   "fieldname": "rf_fabric_sp",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "rf_base_gsm",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "rf_extra_base",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "rf_body_attachment",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_72",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "coated_fabric",
+   "fieldtype": "Data",
+   "label": "Coated"
+  },
+  {
+   "default": "0",
+   "fieldname": "coated_fabric_sp",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "coated_base_gsm",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "coated_body_attachment",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "coated_extra_base",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_78",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_fabric",
+   "fieldtype": "Data",
+   "label": "Total"
+  },
+  {
+   "fieldname": "total_fabric_sp",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "total_base_gsm",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "total_body_attachment",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "total_extra_base",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "section_break_84",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dust_proof",
+   "fieldtype": "Check",
+   "label": "Dust Proof"
+  },
+  {
+   "fieldname": "column_break_86",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "body",
+   "fieldtype": "Check",
+   "label": "Body"
+  },
+  {
+   "fieldname": "column_break_88",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "baffle",
+   "fieldtype": "Check",
+   "label": "Baffle"
+  },
+  {
+   "fieldname": "column_break_90",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "att",
+   "fieldtype": "Check",
+   "label": "Att"
+  },
+  {
+   "fieldname": "column_break_92",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "df_nos",
+   "fieldtype": "Data",
+   "label": "Nos"
+  },
+  {
+   "fieldname": "column_break_94",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gsm",
+   "fieldtype": "Data",
+   "label": "GSM"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "efbt_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "ef_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "cc_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "bf_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "total_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "efbt_w_sp_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "ef_w_sp_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "cc__w_sp_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "bf_w_sp_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "total_w_sp_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "efbt_h_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "ef_h_od",
+   "fieldtype": "Data"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "bf_h_od",
+   "fieldtype": "Data"
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "total_h_od",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"ID\"",
+   "fieldname": "cc_h",
+   "fieldtype": "Float"
+  },
+  {
+   "depends_on": "eval:doc.type ==\"OD\"",
+   "fieldname": "cc_h_od",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "top_attachement_type",
+   "fieldtype": "Section Break",
+   "label": "Top Attachement Type"
+  },
+  {
+   "fieldname": "ta_type",
+   "fieldtype": "Select",
+   "options": "NA\nSpout\nSkirt"
+  },
+  {
+   "default": "Hemming",
+   "fieldname": "hemming",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Top Panel if Spout",
+   "fieldname": "top_panel_if_spout",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_115",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fab_type_spout",
+   "fieldtype": "Select",
+   "label": "Fab Type",
+   "options": "PP-Flat\nPP-Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "fab_type_hemming",
+   "fieldtype": "Select",
+   "options": "PP-Flat\nPP-Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "fab_type_top_panel",
+   "fieldtype": "Select",
+   "options": "PP-Flat\nPP-Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "column_break_119",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gsm_spout",
+   "fieldtype": "Data",
+   "label": "GSM"
+  },
+  {
+   "fieldname": "gsm_hemming",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "gsm_top_panel",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_123",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "coated_spout",
+   "fieldtype": "Data",
+   "label": "Coated"
+  },
+  {
+   "fieldname": "coated_hemming",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "coated_top_panel",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_127",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_spout",
+   "fieldtype": "Data",
+   "label": "Total"
+  },
+  {
+   "fieldname": "total_hemming",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "total_top_panel",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "ccwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bag_weight",
+   "fieldtype": "Float",
+   "label": "Bag Weight",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-04 21:03:35.074357",
+ "modified_by": "Administrator",
+ "module": "Costing",
+ "name": "Cost Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

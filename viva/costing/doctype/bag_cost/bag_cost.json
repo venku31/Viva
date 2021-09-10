@@ -1,0 +1,604 @@
+{
+ "actions": [],
+ "autoname": "B-.####",
+ "creation": "2021-08-09 11:31:23.701482",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bag_weight_details",
+  "column_break_2",
+  "bag_type",
+  "column_break_4",
+  "bag_weight",
+  "conversion_section",
+  "conversion_master",
+  "circular",
+  "u2",
+  "4panel",
+  "lamination",
+  "printing",
+  "top_attach",
+  "bottom_attach",
+  "discount_on_2att",
+  "skirt_open_corner",
+  "petal_closur",
+  "full_loop",
+  "stevedore",
+  "sleeve",
+  "fabric_extra",
+  "extra_stitch",
+  "extra",
+  "total1",
+  "cctariff_column",
+  "circular_tariff",
+  "u2_tariff",
+  "4panel_tariff",
+  "lamination_tariff",
+  "printing_tariff",
+  "top_attach_tariff",
+  "bottom_attach_tariff",
+  "discount_on_2att_tariff",
+  "skirt_open_corner_tariff",
+  "petal_closur_tariff",
+  "full_loop_tariff",
+  "stevedore_tariff",
+  "sleeve_tariff",
+  "fabric_extra_tariff",
+  "extra_stitch_tariff",
+  "extra_tariff",
+  "column_break_22",
+  "total_circular",
+  "total_u2",
+  "total_4panel",
+  "total_lamination",
+  "total_printing",
+  "total_top_attach",
+  "total_bottom_attach",
+  "total_discount_on_2att",
+  "total_skirt_open_corner",
+  "total_petal_closur",
+  "total_full_loop",
+  "total_stevedore",
+  "total_sleeve",
+  "total_fabric_extra",
+  "total_extra_stitch",
+  "total_extra",
+  "total_conversion",
+  "particulars_section",
+  "export",
+  "mb",
+  "uv",
+  "fob",
+  "9_mt_20_container",
+  "18_mt_40_container",
+  "8_mt_truck",
+  "conversion",
+  "total",
+  "column_break_15",
+  "export_bag",
+  "mb_bag",
+  "uv_bag",
+  "fob_bag",
+  "bag9mtr",
+  "bag18mtr",
+  "bag18mtr_truck",
+  "conversion_bag",
+  "total_bag",
+  "column_break_26",
+  "export_liner",
+  "mb_liner",
+  "uv_liner",
+  "fob_liner",
+  "liner9mtr_liner",
+  "liner18mtr_liner",
+  "liner18mtr_truck",
+  "conversion_liner",
+  "total_liner",
+  "column_break_36",
+  "export_dp",
+  "mb_dp",
+  "uv_dp",
+  "fob_dp",
+  "dp9mtr",
+  "dp18mtr",
+  "dp18mtr_truck",
+  "conversion_dp",
+  "total_dp"
+ ],
+ "fields": [
+  {
+   "fieldname": "bag_weight_details",
+   "fieldtype": "Link",
+   "label": "Bag Weight Details",
+   "options": "Bag Weight"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "bag_weight_details.bag_type",
+   "fieldname": "bag_type",
+   "fieldtype": "Link",
+   "label": "Bag Type",
+   "options": "Bag Master",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "bag_weight_details.bag_weight",
+   "fieldname": "bag_weight",
+   "fieldtype": "Data",
+   "label": "Bag Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "particulars_section",
+   "fieldtype": "Section Break",
+   "label": "Particulars"
+  },
+  {
+   "default": "Export",
+   "fieldname": "export",
+   "fieldtype": "Select",
+   "options": "Export\nDeemed"
+  },
+  {
+   "default": "MB",
+   "fieldname": "mb",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "UV",
+   "fieldname": "uv",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "FOB",
+   "fieldname": "fob",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "9 Mt 20' Container",
+   "fieldname": "9_mt_20_container",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "18 Mt 40' Container",
+   "fieldname": "18_mt_40_container",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "8 Mt Truck",
+   "fieldname": "8_mt_truck",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Conversion",
+   "fieldname": "conversion",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Heading",
+   "label": "Total"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "export_bag",
+   "fieldtype": "Int",
+   "label": "Bag"
+  },
+  {
+   "fieldname": "mb_bag",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "uv_bag",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "fob_bag",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "conversion_bag",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_bag",
+   "fieldtype": "Int",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "export_liner",
+   "fieldtype": "Int",
+   "label": "Liner"
+  },
+  {
+   "fieldname": "mb_liner",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "uv_liner",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "fob_liner",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "conversion_liner",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_liner",
+   "fieldtype": "Int",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "export_dp",
+   "fieldtype": "Int",
+   "label": "DP"
+  },
+  {
+   "fieldname": "mb_dp",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "uv_dp",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "fob_dp",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "conversion_dp",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_dp",
+   "fieldtype": "Int",
+   "read_only": 1
+  },
+  {
+   "fieldname": "liner9mtr_liner",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "liner18mtr_liner",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "liner18mtr_truck",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "bag9mtr",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "bag18mtr",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "bag18mtr_truck",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "dp9mtr",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "dp18mtr",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "dp18mtr_truck",
+   "fieldtype": "Int"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "conversion_section",
+   "fieldtype": "Section Break",
+   "label": "Conversion "
+  },
+  {
+   "default": "Circular",
+   "fieldname": "circular",
+   "fieldtype": "Link",
+   "label": "Conversion",
+   "options": "Bag Master"
+  },
+  {
+   "default": "U+2",
+   "fieldname": "u2",
+   "fieldtype": "Link",
+   "options": "Bag Master",
+   "read_only": 1
+  },
+  {
+   "default": "4 Panel",
+   "fieldname": "4panel",
+   "fieldtype": "Link",
+   "options": "Bag Master"
+  },
+  {
+   "default": "Lamination",
+   "fieldname": "lamination",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Printing",
+   "fieldname": "printing",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Top Attach",
+   "fieldname": "top_attach",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Bottom Attach",
+   "fieldname": "bottom_attach",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Discount On 2Att",
+   "fieldname": "discount_on_2att",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Skirt Open Corner",
+   "fieldname": "skirt_open_corner",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Petal Closur",
+   "fieldname": "petal_closur",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Full Loop",
+   "fieldname": "full_loop",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Stevedore",
+   "fieldname": "stevedore",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Sleeve",
+   "fieldname": "sleeve",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Fabric Extra",
+   "fieldname": "fabric_extra",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Extra Stitch",
+   "fieldname": "extra_stitch",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "conversion_master.circular_tariff",
+   "fieldname": "circular_tariff",
+   "fieldtype": "Int",
+   "label": "Tariff"
+  },
+  {
+   "fetch_from": "conversion_master.u2_tariff",
+   "fieldname": "u2_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.4panel_tariff",
+   "fieldname": "4panel_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.lamination_tariff",
+   "fieldname": "lamination_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.printing_tariff",
+   "fieldname": "printing_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.top_attach_tariff",
+   "fieldname": "top_attach_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.bottom_attach_tariff",
+   "fieldname": "bottom_attach_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.discount_on_2att_tariff",
+   "fieldname": "discount_on_2att_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.skirt_open_corner_tariff",
+   "fieldname": "skirt_open_corner_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.petal_closur_tariff",
+   "fieldname": "petal_closur_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.full_loop_tariff",
+   "fieldname": "full_loop_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.stevedore_tariff",
+   "fieldname": "stevedore_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.sleeve_tariff",
+   "fieldname": "sleeve_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.fabric_extra_tariff",
+   "fieldname": "fabric_extra_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fetch_from": "conversion_master.extra_stitch_tariff",
+   "fieldname": "extra_stitch_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_circular",
+   "fieldtype": "Int",
+   "label": "Total"
+  },
+  {
+   "fieldname": "total_u2",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_4panel",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_lamination",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_printing",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_top_attach",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_bottom_attach",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_discount_on_2att",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_skirt_open_corner",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_petal_closur",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "cctariff_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "conversion-01",
+   "fieldname": "conversion_master",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "conversion Master",
+   "options": "Conversion Master"
+  },
+  {
+   "default": "Extra",
+   "fieldname": "extra",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "extra_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_full_loop",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_stevedore",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_sleeve",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_fabric_extra",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_extra_stitch",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "total_extra",
+   "fieldtype": "Int"
+  },
+  {
+   "default": "Total",
+   "fieldname": "total1",
+   "fieldtype": "Heading",
+   "label": "Total"
+  },
+  {
+   "fieldname": "total_conversion",
+   "fieldtype": "Int",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-10 16:17:33.229854",
+ "modified_by": "Administrator",
+ "module": "Costing",
+ "name": "Bag Cost",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

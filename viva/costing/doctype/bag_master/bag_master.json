@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "field:bag_type",
+ "creation": "2021-08-02 11:59:46.310696",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bag_type",
+  "fabric",
+  "webb_type",
+  "tunnel_type",
+  "extra_fold_bag_type_l",
+  "extra_fold_bag_type_wsp",
+  "extra_fold_bag_type_h"
+ ],
+ "fields": [
+  {
+   "fieldname": "bag_type",
+   "fieldtype": "Data",
+   "label": "Bag Type",
+   "unique": 1
+  },
+  {
+   "fieldname": "fabric",
+   "fieldtype": "Select",
+   "label": "Fabric",
+   "options": "\nPP-Flat\nPP-Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "webb_type",
+   "fieldtype": "Select",
+   "label": "Webb Type",
+   "options": "\nPP\nNylon"
+  },
+  {
+   "fieldname": "tunnel_type",
+   "fieldtype": "Select",
+   "label": "Tunnel Type",
+   "options": "\nBody Tunnel\nTunnel Attach\nNA"
+  },
+  {
+   "fieldname": "extra_fold_bag_type_l",
+   "fieldtype": "Data",
+   "label": "Extra Fold Bag Type L"
+  },
+  {
+   "fieldname": "extra_fold_bag_type_wsp",
+   "fieldtype": "Data",
+   "label": "Extra Fold Bag Type WSP"
+  },
+  {
+   "fieldname": "extra_fold_bag_type_h",
+   "fieldtype": "Data",
+   "label": "Extra Fold Bag Type H"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-09 10:11:16.497186",
+ "modified_by": "Administrator",
+ "module": "Costing",
+ "name": "Bag Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

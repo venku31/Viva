@@ -1,0 +1,230 @@
+{
+ "actions": [],
+ "creation": "2021-08-10 09:59:43.448019",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "circular",
+  "u2",
+  "4panel",
+  "lamination",
+  "printing",
+  "top_attach",
+  "bottom_attach",
+  "discount_on_2att",
+  "skirt_open_corner",
+  "petal_closur",
+  "full_loop",
+  "stevedore",
+  "sleeve",
+  "fabric_extra",
+  "extra_stitch",
+  "column_break_4",
+  "circular_tariff",
+  "u2_tariff",
+  "4panel_tariff",
+  "lamination_tariff",
+  "printing_tariff",
+  "top_attach_tariff",
+  "bottom_attach_tariff",
+  "discount_on_2att_tariff",
+  "skirt_open_corner_tariff",
+  "petal_closur_tariff",
+  "full_loop_tariff",
+  "stevedore_tariff",
+  "sleeve_tariff",
+  "fabric_extra_tariff",
+  "extra_stitch_tariff"
+ ],
+ "fields": [
+  {
+   "default": "Circular",
+   "fieldname": "circular",
+   "fieldtype": "Link",
+   "label": "Conversion",
+   "options": "Bag Master",
+   "read_only": 1
+  },
+  {
+   "default": "U+2",
+   "fieldname": "u2",
+   "fieldtype": "Link",
+   "options": "Bag Master",
+   "read_only": 1
+  },
+  {
+   "default": "4 Panel",
+   "fieldname": "4panel",
+   "fieldtype": "Link",
+   "options": "Bag Master",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "circular_tariff",
+   "fieldtype": "Int",
+   "label": "Tariff"
+  },
+  {
+   "fieldname": "u2_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "4panel_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "default": "Lamination",
+   "fieldname": "lamination",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Printing",
+   "fieldname": "printing",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Top Attach",
+   "fieldname": "top_attach",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Bottom Attach",
+   "fieldname": "bottom_attach",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Discount On 2 Att",
+   "fieldname": "discount_on_2att",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Skirt Open Corner",
+   "fieldname": "skirt_open_corner",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Petal Closur",
+   "fieldname": "petal_closur",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Full_loop",
+   "fieldname": "full_loop",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Stevedore",
+   "fieldname": "stevedore",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Sleeve",
+   "fieldname": "sleeve",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Fabric Extra",
+   "fieldname": "fabric_extra",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "Extra Stitch",
+   "fieldname": "extra_stitch",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "lamination_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "printing_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "top_attach_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "bottom_attach_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "discount_on_2att_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "skirt_open_corner_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "petal_closur_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "full_loop_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "stevedore_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "sleeve_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "fabric_extra_tariff",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "extra_stitch_tariff",
+   "fieldtype": "Int"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-08-10 10:28:19.988116",
+ "modified_by": "Administrator",
+ "module": "Costing",
+ "name": "Conversion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
